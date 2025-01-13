@@ -28,7 +28,7 @@ jobs:
               })
             })
 
-    - name: Fetch the latest version from overleaf server
+    - name: Fetch the latest version from selfhost overleaf server
       uses: subhamx/overleaf_sync_with_git@master
       with:
         OVERLEAF_PROJECT_ID: ${{ secrets.OVERLEAF_PROJECT_ID }}
