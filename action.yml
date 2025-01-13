@@ -1,5 +1,5 @@
 # action.yml
-name: "Overleaf Sync with Git"
+name: "Self Host Overleaf CE Sync with Git"
 branding:
   icon: 'align-center'  
   color: 'yellow'
@@ -12,13 +12,13 @@ inputs:
     required: true
   OVERLEAF_COOKIE_KEY:
     description: "The key of the cookie, default is overleaf_session2"
-    default: "overleaf_session2"
+    default: "overleaf.sid"
   OVERLEAF_PROJECT_ID: # id of input
     description: "Id of the project you want the bot to take automatic snapshot"
     required: true
   OVERLEAF_HOST:
     description: "Hostname of your Overleaf Instance, default is www.overleaf.com"
-    default: "www.overleaf.com"
+    default: "latex.sharehpc.cn"
 
 
 runs:
