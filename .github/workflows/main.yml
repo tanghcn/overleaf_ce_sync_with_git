@@ -33,8 +33,6 @@ jobs:
       with:
         OVERLEAF_PROJECT_ID: ${{ secrets.OVERLEAF_PROJECT_ID }}
         OVERLEAF_COOKIE: ${{ secrets.OVERLEAF_COOKIE }}
-        # Hostname of your Overleaf Instance, default is www.overleaf.com
-        OVERLEAF_HOST: ${{ secrets.OVERLEAF_HOST }}
 
     - name: Upload to Project Artifacts
       uses: actions/upload-artifact@v4
