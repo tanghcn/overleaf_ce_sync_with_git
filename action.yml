@@ -2,7 +2,7 @@
 name: "Self Host Overleaf CE Sync with Git"
 branding:
   icon: 'align-center'  
-  color: 'yellow'
+  color: 'blue'
 description: "🤖 A GitHub action to take backups from OverLeaf which is an Online LaTeX Editor."
 
 
