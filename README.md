@@ -1,12 +1,12 @@
 # Overleaf Sync with Git
 
 
-🤖 A GitHub action to take backups from OverLeaf which is an Online LaTeX Editor.
+🤖 A GitHub action to take backups from selfhost OverLeaf which is an Online LaTeX Editor.
 
 
 ## Usage
 
-Ensure that you have set **OVERLEAF_COOKIE** and **OVERLEAF_PROJECT_ID** as GitHub secrets. Head over to [this link](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) to get more info on how to add secrets to a GitHub repo.
+Ensure that you have set **OVERLEAF_COOKIE** ,**OVERLEAF_COOKIE_KEY** , **OVERLEAF_PROJECT_ID** and **OVERLEAF_HOST** as GitHub secrets. Head over to [this link](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) to get more info on how to add secrets to a GitHub repo.
 
 You may also need to edit your project settings to allow workflows to write to your repository. Click on Settings -> then Actions and ensure that under Workflow permissions you've provided Read and write permissions to workflow.
 ![image](https://github.com/MattHeffNT/overleaf_sync_with_git/assets/43654114/a1a7203c-3ff4-4712-ba3e-d32df0605b50)
@@ -47,6 +47,8 @@ jobs:
     - name: Fetch the latest version from overleaf server
       uses: subhamx/overleaf_sync_with_git@master
       with:
+        OVERLEAF_HOST: ${{ secrets.OVERLEAF_HOST }}
+        OVERLEAF_COOKIE_KEY: ${{ secrets.OVERLEAF_COOKIE_KEY }}
         OVERLEAF_PROJECT_ID: ${{ secrets.OVERLEAF_PROJECT_ID }}
         OVERLEAF_COOKIE: ${{ secrets.OVERLEAF_COOKIE }}
 
