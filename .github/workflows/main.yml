@@ -34,6 +34,7 @@ jobs:
         OVERLEAF_PROJECT_ID: ${{ secrets.OVERLEAF_PROJECT_ID }}
         OVERLEAF_COOKIE: ${{ secrets.OVERLEAF_COOKIE }}
         OVERLEAF_HOST: ${{ secrets.OVERLEAF_HOST }}
+        OVERLEAF_COOKIE_KEY: ${{ secrets.OVERLEAF_COOKIE_KEY }}
 
     - name: Upload to Project Artifacts
       uses: actions/upload-artifact@v4
