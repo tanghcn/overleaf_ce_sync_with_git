@@ -1,4 +1,4 @@
-# Overleaf Sync with Git
+# selfhost Overleaf ce Sync with Git
 
 
 🤖 A GitHub action to take backups from selfhost OverLeaf which is an Online LaTeX Editor.
